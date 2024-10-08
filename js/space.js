@@ -34,15 +34,11 @@ document.getElementById('btnBuscar').addEventListener('click', () => {
             const date = elemento.data[0]?.date_created || 'Sin fecha'; // Valor por defecto si no hay fecha
 
             const resultItem = `
-                 <div class="col-md-8 col-12 mb-4">
-                    <div class="card">
-                        <img src="${imgSrc}" class="card-img-top" alt="${title}">
-                        <div class="card-body">
-                            <h5 class="card-title">${title}</h5>
-                            <p class="card-text">${description}</p>
-                            <p class="card-text"><small class="text-muted">Fecha: ${date}</small></p>
-                        </div>
-                    </div>
+                <div>
+                    <h3>${title}</h3>
+                    <img src="${imgSrc}" alt="${title}">
+                    <p>${description}</p>
+                    <p><strong>Fecha:</strong> ${date}</p>
                 </div>
             `;
             resultsDiv.innerHTML += resultItem; // Agregar el resultado al contenedor
